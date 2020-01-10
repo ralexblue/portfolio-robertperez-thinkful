@@ -26,7 +26,7 @@ const navbar=function(){
 
 const aboutmepage=function(){
 return `
-    <div class = "aboutformat">
+    <div class = "aboutformat" id="about">
     <div class ="info">
         <h2>About Me<h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
@@ -52,7 +52,7 @@ return `
 }
 const projectspage=function(){
     return `
-    <div class="projectsformat">
+    <div class="projectsformat" id="projects">
         <h1>Projects</h1>
         <div class ="projects" onclick="window.open('https://thinkful-ei-jaguar.github.io/quiz-appRobert-Kristofer/','mywindow');" style="cursor: pointer;">
             <h1>Quiz-App<h1>
@@ -69,7 +69,7 @@ const projectspage=function(){
 }
 const contactpage=function(){
     return `
-    <div class ="contactform">
+    <div class ="contactform" id ="contact">
     <h1>Contact<h1>
     <h2>Email Adress:</h2>
     <p>raperez523@gmail.com</p>
@@ -87,24 +87,27 @@ const contactpage=function(){
 const thebody=function(){
     const about=aboutmepage()+projectspage()+contactpage();
     $('.body').html(about);
-    //$("body").css("background-color", "#2EB6E8");
+    $("body").css("background-color", "#2EB6E8");
     $( "ul li" ).click(function( event ) {
         var target = $( event.target ).text();
         console.log(target);
         if ( target == 'Home' ) {
             const about=aboutmepage()+projectspage()+contactpage();
              $('.body').html(about);
-             //$("body").css("background-color", "#2EB6E8");
+             $("body").css("background-color", "#2EB6E8");
+             $('html, body').animate({scrollTop: $("#about").offset().top},'slow');
         }
         else if ( target == 'Projects' ) {
-            //$("body").css("background-color", "#419AFF");
+            $("body").css("background-color", "#419AFF");
+            $('html, body').animate({scrollTop: $("#projects").offset().top},'slow');
         }
 
         else if(target==`Contact`){
-            //$("body").css("background-color", "#2E54E8");
-
+            $("body").css("background-color", "#2E54E8");
+            $('html, body').animate({scrollTop: $("#contacts").offset().top},'slow');
         }
       });
+
 }
 
 
