@@ -29,19 +29,24 @@ return `
     <div class = "aboutformat">
     <div class ="info">
         <h2>About Me<h2>
-        <p>I'm a Software Engineer with an Associates Degree in Computer Science.</p>
-        <p>I like being a developer because it reminds me of Legos and rather than small 
-        <p>toy brick to make a house its unseen digital blocks that I can build with.</p>
-        <p>Projects I would like to help with are more ease of use since technnology is growing</p>
-        <p>more and more. I like how easier life has been by ordering online or whole taxi service using my phone</p>
-        <h2>Hobbies<h2>
-        <p>Some hobbies I have is playing and or hearing music that I like.</p>
-        <p>I like reading manga/manhwua and like going through different stories.</p>
-        <p>I also like to play smash bros.</p>
-        <p>One of my favorite dishes in the world is orange tofu,I don't know why but I get it everytime for some reason.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+        incididunt ut labore et dolore magna aliqua. Mi sit amet mauris 
+        commodo quis imperdiet massa tincidunt nunc. Purus sit amet luctus 
+        venenatis lectus magna fringilla. Sed nisi lacus sed viverra tellus
+         in hac. Leo integer malesuada nunc vel risus commodo. Nascetur 
+         ridiculus mus mauris vitae ultricies leo integer. Scelerisque 
+         fermentum dui faucibus in ornare. Et netus et malesuada fames ac 
+         turpis egestas maecenas pharetra. Donec ac odio tempor orci. Luctus
+          venenatis lectus magna fringilla urna porttitor rhoncus. Vel 
+          fringilla est ullamcorper eget. Mattis rhoncus urna neque viverra 
+          justo nec ultrices dui sapien. Morbi non arcu risus quis. Turpis
+           in eu mi bibendum neque. Nibh mauris cursus mattis molestie a 
+           iaculis at erat. Est ullamcorper eget nulla facilisi etiam 
+           dignissim diam. Elementum tempus egestas sed sed risus.ofu,
+           I don't know why but I get it everytime for some reason.</p>
         
     </div>
-    <img class="line" src="https://www.veganricha.com/wp-content/uploads/2019/01/Vegan-Orange-Tofu-veganricha-6124.jpg"></img>
+    
     </div>
 `
 }
@@ -51,7 +56,6 @@ const projectspage=function(){
         <h1>Projects</h1>
         <div class ="projects" onclick="window.open('https://thinkful-ei-jaguar.github.io/quiz-appRobert-Kristofer/','mywindow');" style="cursor: pointer;">
             <h1>Quiz-App<h1>
-
             <p class="hidden">
             <br>This is a simple quiz application about Sound Physics.
             <br>The user can choose between answer choices and submit to see next question to be answered.
@@ -81,31 +85,24 @@ const contactpage=function(){
     `
 }*/
 const thebody=function(){
-    const about=aboutmepage();
+    const about=aboutmepage()+projectspage()+contactpage();
     $('.body').html(about);
-    $("body").css("background-color", "#2EB6E8");
+    //$("body").css("background-color", "#2EB6E8");
     $( "ul li" ).click(function( event ) {
         var target = $( event.target ).text();
         console.log(target);
         if ( target == 'Home' ) {
-            const about=aboutmepage();
+            const about=aboutmepage()+projectspage()+contactpage();
              $('.body').html(about);
-             $("body").css("background-color", "#2EB6E8");
+             //$("body").css("background-color", "#2EB6E8");
         }
         else if ( target == 'Projects' ) {
-            const projects = projectspage();
-            $('.body').html(projects);
-            $("body").css("background-color", "#419AFF");
+            //$("body").css("background-color", "#419AFF");
         }
+
         else if(target==`Contact`){
-            const contact = contactpage();
-            $('.body').html(contact);
-            $("body").css("background-color", "#2E54E8");
-        }
-        else if(target==`Resume`){
-            const resume = resumepage();
-            $('.body').html(resume);
-            $("body").css("background-color", "#499BE3");
+            //$("body").css("background-color", "#2E54E8");
+
         }
       });
 }
