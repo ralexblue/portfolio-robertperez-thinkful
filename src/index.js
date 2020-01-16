@@ -26,45 +26,40 @@ const navbar=function(){
 
 const aboutmepage=function(){
 return `
-    <div class = "aboutformat" id="about">
+<div class = "aboutformat" id="about">
     <div class ="info">
         <h2>About Me<h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-        incididunt ut labore et dolore magna aliqua. Mi sit amet mauris 
-        commodo quis imperdiet massa tincidunt nunc. Purus sit amet luctus 
-        venenatis lectus magna fringilla. Sed nisi lacus sed viverra tellus
-         in hac. Leo integer malesuada nunc vel risus commodo. Nascetur 
-         ridiculus mus mauris vitae ultricies leo integer. Scelerisque 
-         fermentum dui faucibus in ornare. Et netus et malesuada fames ac 
-         turpis egestas maecenas pharetra. Donec ac odio tempor orci. Luctus
-          venenatis lectus magna fringilla urna porttitor rhoncus. Vel 
-          fringilla est ullamcorper eget. Mattis rhoncus urna neque viverra 
-          justo nec ultrices dui sapien. Morbi non arcu risus quis. Turpis
-           in eu mi bibendum neque. Nibh mauris cursus mattis molestie a 
-           iaculis at erat. Est ullamcorper eget nulla facilisi etiam 
-           dignissim diam. Elementum tempus egestas sed sed risus.ofu,
-           I don't know why but I get it everytime for some reason.</p>
-        
-    </div>
-    
+        <p>I'm a Software Engineer with an Associates Degree in Computer Science.
+        I like to develop with software because it reminds me of Lego bricks and rather than small
+        toy bricks to make a house its unseen digital blocks that I can build with.
+        Projects I would like to help with are more user accesibility and control flow since technology is always growing. I like how easier life has been by ordering online or using a  whole taxi service in my phone.These apps are made with many people so I love to code with others since they always provide insightful alternatives to problems or me providing other solutions to them. Some hobbies I have is playing and or hearing music that I like.
+        I like reading manga/manhwa and like exploring through different stories.
+        One of my favorite dishes in the world is orange tofu,I don't know why but I get it every time I eat out for chinese.
+        </p>
+        </div>
+        <img class="line" src="https://www.veganricha.com/wp-content/uploads/2019/01/Vegan-Orange-Tofu-veganricha-6124.jpg" height="650px"></img>
     </div>
 `
 }
 const projectspage=function(){
     return `
+  
     <div class="projectsformat" id="projects">
         <h1>Projects</h1>
-        <div class ="projects" onclick="window.open('https://thinkful-ei-jaguar.github.io/quiz-appRobert-Kristofer/','mywindow');" style="cursor: pointer;">
+        <div class ="projects">
+        <a class="nothing" href="https://thinkful-ei-jaguar.github.io/quiz-appRobert-Kristofer/" target="_blank">
             <h1>Quiz-App<h1>
             <p class="hidden">
             <br>This is a simple quiz application about Sound Physics.
             <br>The user can choose between answer choices and submit to see next question to be answered.
             <br>Jquery,HTML,and CSS.
             </p>
-            <button  type="button" class="left" onclick="window.open('https://github.com/thinkful-ei-jaguar/quiz-appRobert-Kristofer','mywindow');">Repo</button>
+            </a>
+            <button  type="button" class="left"  onclick="window.open('https://github.com/thinkful-ei-jaguar/quiz-appRobert-Kristofer','mywindow');">Repo</button>
         </div>
-        
+
     </div>
+   
     `
 }
 const contactpage=function(){
@@ -72,10 +67,13 @@ const contactpage=function(){
     <div class ="contactform" id ="contact">
     <h1>Contact<h1>
     <h2>Email Adress:</h2>
-    <p>raperez523@gmail.com</p>
+    <a href="mailto:raperez523@gmail.com" target="_top">raperez523@gmail.com</a>
     <h2>Github:</h2>
-    <p>ralexblue</p>
-    <//div>
+    <a href="https://github.com/ralexblue">ralexblue</a>
+    <h2>LinkeIn</h2>
+    <a href="https://www.linkedin.com/in/robert-perez-198622199/">Robert Perez</a>
+    </div>
+
     `
 }
 /*const resumepage=function(){
@@ -101,29 +99,20 @@ const thebody=function(){
             $("body").css("background-color", "#419AFF");
             $('html, body').animate({scrollTop: $("#projects").offset().top},'slow');
         }
-
         else if(target==`Contact`){
             $("body").css("background-color", "#2E54E8");
             $('html, body').animate({scrollTop: $("#contacts").offset().top},'slow');
         }
       });
-
 }
-
-
 const thetop = function(){
     let htmltop='';
     htmltop=name()+navbar();
     $('.head').html(htmltop);
 }
-
-
 const main = function(){
     thetop();
     thebody();
 }
-
-
-
 $(main);
 
